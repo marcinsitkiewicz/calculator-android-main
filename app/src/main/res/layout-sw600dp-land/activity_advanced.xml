@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/colorGray">
+
+    <TextView android:id="@+id/expressionTextView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text=""
+              android:scrollHorizontally="false"
+              android:maxLines="2"
+              android:ellipsize="end"
+              android:textSize="50sp"
+              android:gravity="end"
+              android:padding="20dp"
+              android:textColor="@color/colorAccent">
+    </TextView>
+
+    <TextView android:id="@+id/resultTextView"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text=""
+              android:textSize="70sp"
+              android:gravity="end"
+              android:padding="20dp"
+              android:textColor="@color/colorWhite">
+    </TextView>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical"
+                  android:gravity="bottom">
+
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="100dp"
+                      android:orientation="horizontal"
+                      android:background="@color/colorWhite">
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_7"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_8"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_9"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/multiply"
+                    android:textSize="30sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sin"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/sqrtButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sqrt"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/pow2"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/log"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="100dp"
+                      android:orientation="horizontal"
+                      android:background="@color/colorWhite">
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_4"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_5"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_6"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/add"
+                    android:textSize="30sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/cos"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/parenthesesOpenButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/openParentheses"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/powY"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/ln"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="100dp"
+                      android:orientation="horizontal"
+                      android:background="@color/colorWhite">
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_1"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_2"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_3"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sub"
+                    android:textSize="30sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/tan"
+                    android:textSize="30sp"
+                    android:onClick="onOperatorAdvanced"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/parenthesesCloseButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/closeParentheses"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+            </Button>
+
+
+            <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/back"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+
+            <Button
+                    android:id="@+id/allClearButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/c"
+                    android:textSize="30sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="100dp"
+                      android:orientation="horizontal"
+                      android:background="@color/colorWhite">
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/_0"
+                    android:textSize="30sp"
+                    android:onClick="onDigitClick"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/signChange"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/signChange"
+                    android:textSize="30sp"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/decimalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/decimal"
+                    android:textSize="30sp"
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/divide"
+                    android:textSize="30sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+
+
+            <Button
+                    android:id="@+id/equalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:text="@string/equals"
+                    android:textSize="60sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccentDark"
+                    style="?android:attr/borderlessButtonStyle">
+
+            </Button>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
